@@ -1,7 +1,5 @@
 FROM paulbrown/base:latest
 
-ENV SCALA_VERSION 2.11
-
 COPY confluent.repo /etc/yum.repos.d/confluent.repo
 
 RUN yum upgrade --quiet --assumeyes && yum clean all
