@@ -8,6 +8,8 @@ RUN yum install --quiet --assumeyes java-headless confluent-schema-registry && y
 
 EXPOSE 8081
 
+COPY schema-registry.properties /etc/schema-registry/schema-registry.properties
+
 COPY onStart.sh /onStart.sh
 
 ENTRYPOINT ["/onStart.sh"]
